@@ -46,6 +46,8 @@ Differents steps were carried out in processing the text;
 The code for the data preprocessing is written in the form of a script, and it is save as process_data.py. To run it in a note book you use this command ' %run -i process_data.py Analysis_data.json model_df.csv'. Where process_data.py is the name of the script file, Analysis_data.json is the name of the data file and model_df.csv is the output file, which is contain a clean dataset.
 ## Model Training
 Before training the model, I first did word Lemmatization before converting the text to vector since maching learning model can not be train using text. Two approaches are used for text vectorization; the first is the use of TFIDFVectorize from Sklearn, and the other is the use Word2Vec word- embeddings approach.
+
+
 ## Pre-requisites
 In order to run the code successfully, the following liberaries have to be installed on your notebook
 * Pandas, latest version
