@@ -10,10 +10,10 @@ In this project, an NLP model is trained to classify new headlines into four dif
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#Exploratory data analysis">Prerequisites</a></li>
+        <li><a href="#Exploratory data analysis">Exploratory data analysis</a></li>
       </ul>
       <ul>
-        <li><a href="#Text Preprocessing">Prerequisites</a></li>
+        <li><a href="#Text Preprocessing">Text Preprocessing</a></li>
       </ul>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
