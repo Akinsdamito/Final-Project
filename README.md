@@ -16,10 +16,14 @@ In this project, an NLP model is trained to classify new headlines into four dif
         <li><a href="#Text Preprocessing">Text Preprocessing</a></li>
       </ul>
       <ul>
+        <li><a href="#Model Training">Model Training</a></li>
+      </ul>
+      <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
     <li><a href="#Uploded Files">Uploded Files</a></li>    
+     <li><a href="#Conclusion">Conclusion</a></li> 
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
@@ -34,9 +38,9 @@ The project is divided into 3 parts:
 * Lastly, I created an NLP pipeline and Machine learning pipeline process. Since it is impossible to train a model with a text data, so we converted the messages to a word of vector before training the machine learning model. Two approaches were used to convert the messages to vectors, I used CountVectorizer and TfidfTransformer when creating non neural network model, and used Word2Vec word embedding approach when training a neural network model using Keras.
 # Getting Started
 This project codes are written  in python and group into 3:
-## Exploratory data analysis
+## A. Exploratory data analysis
 The data set consist of 6 columns, which are the category, headline, authors, link, short description and date, but I only focus on 2 of the columns which are category and headline in traning the models. The code for the data exploration is written in a notebook, and is uploaded as a file name dataexplore.ipynb.
-## Text Preprocessing
+## B. Text Preprocessing
 Differents steps were carried out in processing the text; 
 * Duplicate data are removed and missing values are dropped.
 * All non-English language headlines dropped.
@@ -44,10 +48,9 @@ Differents steps were carried out in processing the text;
 * Word segmentation was done to separate words that are joined together e.g 'edmontondeliveredcreated' will be returned as 'edmonton, delivered, created'.
 * De-noising the dataset, normalization, and removal of the stopwords.
 The code for the data preprocessing is written in the form of a script, and it is save as process_data.py. To run it in a note book you use this command ' %run -i process_data.py Analysis_data.json model_df.csv'. Where process_data.py is the name of the script file, Analysis_data.json is the name of the data file and model_df.csv is the output file, which is contain a clean dataset.
-## Model Training
-Before training the model, Lemmatization was done followed by conversion of the text to vector since maching learning model can not be train using text. Two approaches are used for text vectorization; the first is the use of TFIDFVectorize from Sklearn, and the other is the use Word2Vec word- embeddings approach.
-
-
+## C. Model Training
+Before training the model, Lemmatization was done followed by conversion of the text to vector since maching learning model can not be train using text. Two approaches are used for text vectorization; the first is the use of TFIDFVectorize from Sklearn when training the model with non-neural network algorithm, and the other is the use Word2Vec word- embeddings approach when training neural network model. The metric used in accessing the models skill is the accuracy of the model classification. The codes for the non-neural network is written in a noteboke which contained explanations and the diffrent methods used, the node book is in the directory name NonneuralNetwork, also for the neural network model, the nodebook is in directory named Neural_Network folder.
+The final model code is written in the form of a script, and it is save as NonNeural_train.py. To run it in a note book you use this command ' %run -i NonNeural_train.py model_df.csv classifierbb.pkl'. Where NonNeural_train.py is the name of the script file, model_df.csv is the name of the data file and classifierbb.pkl is the output model, which is the trained model saved as a pickel file.
 ## Pre-requisites
 In order to run the code successfully, the following liberaries have to be installed on your notebook
 * Pandas, latest version
@@ -66,11 +69,16 @@ In order to run the code successfully, the following liberaries have to be insta
 
 # Uploded Files
 The following file are uploded in this repository:
-* Code for data exploration
-* The code for the extract, transformation and loading the data into CSV file, which is written in python.
-* The data files used for the analysis.
-* Codes for the training the models using non neural network and neural network approach
+* Code for data exploration which is written on notebook, and it it named dataexplore.ipynb
+* The data files used for the analysis named Analysis_data.json
+* The code for the extract, transformation and loading the data into CSV file, which is written in python and in file name process_data.py.
+* Python functions used in the project and the file name is python_functions.py .
+* Codes for the training the models using non neural network and neural network approach, the directories for the two approaches are Neural_Network and NonneuralNetwork
+* Python script to train the final model save in file named NonNeural_train.py.
+* File containing additional stopwords to be remove from the dataset file name newstopword
 * A readme file that explains the information in the data.
+
+# Conclusion
 
 
 # Acknowledgements
