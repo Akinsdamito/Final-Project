@@ -79,7 +79,7 @@ The following file are uploded in this repository:
 * A readme file that explains the information in the data.
 
 # Conclusion
-
+A classification model is constructed using different algorithm, but the algorithm that gave the best result is the MultinomialNB. But the model accuracy is less than 50%, which imply that there is room for improvement. One way to improve the model is to do more in cleaning the data set, we can also identify the part of speech in each of the headline, and apply it when training the model. Another way is to use other embedding algorithm such as BERT, Glove instead of using the ones I used.
 
 # Acknowledgements
 * This project wouldn't be possible if not for kaggle team, who provided the data used .
